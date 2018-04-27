@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,42 +13,55 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A2c-b9-nKt"/>
+                        <viewControllerLayoutGuide type="bottom" id="mih-Ya-66P"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KkQ-Gi-QQZ">
-                                <rect key="frame" x="88" y="305" width="199" height="57"/>
-                                <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyn-7H-KFf">
-                                <rect key="frame" x="132" y="196" width="111" height="50"/>
-                                <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="changeType"/>
-                                <connections>
-                                    <action selector="changeTypeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OjR-Al-0OG"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.JailBreak 是我封装的类，用来判断越狱" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTk-7u-gEx">
+                                <rect key="frame" x="16" y="198" width="343" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="WhW-cd-C6P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.0078431372550000003" green="0.69019607839999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.防动态调试，判断条件是release版本的前提下，上线打包需要改成release版本，在main.m文件中" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iib-yq-9xC">
+                                <rect key="frame" x="16" y="324" width="343" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="TBE-cP-sO1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0078431372550000003" green="0.69019607839999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安全" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAl-50-Ygp">
+                                <rect key="frame" x="133" y="70" width="108" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Dwb-Gs-UjL"/>
+                                    <constraint firstAttribute="width" constant="108" id="aVp-Ni-NEu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Yyn-7H-KFf" firstAttribute="centerX" secondItem="KkQ-Gi-QQZ" secondAttribute="centerX" id="3jN-yB-ygx"/>
-                            <constraint firstItem="Yyn-7H-KFf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="Fcn-2p-Zza"/>
-                            <constraint firstItem="KkQ-Gi-QQZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GbS-Eh-AOH"/>
-                            <constraint firstItem="KkQ-Gi-QQZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="285" id="OON-BW-Siz"/>
-                            <constraint firstItem="Yyn-7H-KFf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="QNR-dS-QaD"/>
-                            <constraint firstItem="KkQ-Gi-QQZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="S1I-tm-lHZ"/>
-                            <constraint firstItem="KkQ-Gi-QQZ" firstAttribute="top" secondItem="Yyn-7H-KFf" secondAttribute="bottom" constant="59" id="mhJ-8r-6cS"/>
-                            <constraint firstItem="KkQ-Gi-QQZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yZE-NB-ba6"/>
+                            <constraint firstAttribute="trailing" secondItem="kTk-7u-gEx" secondAttribute="trailing" constant="16" id="6TF-Tn-M8G"/>
+                            <constraint firstItem="tAl-50-Ygp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9vI-rU-x7w"/>
+                            <constraint firstAttribute="trailing" secondItem="iib-yq-9xC" secondAttribute="trailing" constant="16" id="MVP-58-Nab"/>
+                            <constraint firstItem="iib-yq-9xC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="SKg-jD-blb"/>
+                            <constraint firstItem="kTk-7u-gEx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="SuR-Hy-K5F"/>
+                            <constraint firstItem="kTk-7u-gEx" firstAttribute="top" secondItem="tAl-50-Ygp" secondAttribute="bottom" constant="86" id="jjI-Zn-7iS"/>
+                            <constraint firstItem="tAl-50-Ygp" firstAttribute="top" secondItem="A2c-b9-nKt" secondAttribute="bottom" constant="50" id="py9-oL-oew"/>
+                            <constraint firstItem="iib-yq-9xC" firstAttribute="top" secondItem="kTk-7u-gEx" secondAttribute="bottom" constant="48" id="y72-dd-eww"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="textfiled" destination="KkQ-Gi-QQZ" id="Mhp-Wc-vYE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
